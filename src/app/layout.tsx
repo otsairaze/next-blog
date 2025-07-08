@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import "./styles/global.scss";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
 
 const inter = Inter({
   subsets: ["cyrillic"],
-  weight: ["400", "500", "600"]
+  weight: ["500"]
 });
 
 const RootLayout = ({

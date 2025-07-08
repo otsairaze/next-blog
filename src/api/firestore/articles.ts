@@ -1,4 +1,5 @@
 import { collection, getDocs } from "firebase/firestore";
+
 import { db } from "./index.";
 
 export const getArticles = async () => {

@@ -1,0 +1,26 @@
+.Button {
+  cursor: pointer;
+  color: var(--button-text-color);
+  background-color: (--primary-color);
+  padding: 6px 15px;
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.size_medium {
+  font: var(--font-m);
+  padding: 6px 15px;
+}
+
+.size_large {
+  font: var(--font-l);
+  padding: 10px 20px;
+}
+
+.size_xlarge {
+  font: var(--font-xl);
+  padding: 14px 25px;
+}
