@@ -1,0 +1,49 @@
+.title {
+  color: var(--primary-color);
+}
+
+.text {
+  color: var(--primary-color);
+}
+
+.error {
+  .title {
+    color: var(--red-light);
+  }
+
+  .text {
+    color: var(--red-dark);
+  }
+}
+
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.size_medium {
+  .title {
+    font: var(--font-l);
+  }
+
+  .text {
+    font: var(--font-l);
+  }
+}
+
+.size_large {
+  .title {
+    font: var(--font-xl);
+  }
+
+  .text {
+    font: var(--font-l);
+  }
+}
