@@ -23,5 +23,6 @@ jobs:
         run: npm run lint
         if: always()
       - name: screen testing with chromatic
+        env:
+          CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
         run: npm run chromatic
-        if: always()
