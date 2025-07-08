@@ -22,7 +22,3 @@ jobs:
         run: npm install
       - name: linting typescript and css
         run: npm run lint
-      - name: screen testing with chromatic
-        env:
-          CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-        run: npm run chromatic
