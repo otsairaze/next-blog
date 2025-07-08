@@ -6,6 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "lint": "npx eslint . --ext .ts,.tsx && npx stylelint \"**/*.scss\"",
+    "lint:fix": "npx eslint \"**/*.{ts,tsx}\" --fix && npx stylelint \"**/*.scss\" --fix",
     "lint:ts": "eslint \"src/**/*.{ts,tsx}\"",
     "lint:ts:fix": "eslint \"src/**/*.{ts,tsx}\" --fix",
     "lint:scss": "stylelint \"src/**/*.scss\"",
