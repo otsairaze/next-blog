@@ -22,3 +22,6 @@ jobs:
       - name: linting typescript and css
         run: npm run lint
         if: always()
+      - name: screen testing with chromatic
+        run: npm run chromatic
+        if: always()
