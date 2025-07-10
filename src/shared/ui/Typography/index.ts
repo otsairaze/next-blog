@@ -1,1 +1,1 @@
-export { Typography, TextAlign, TextColor, TextSize } from "./ui/Typography";
+export { Typography, TypographyAlign, TypographyColor, TypographySize } from "./ui/Typography";

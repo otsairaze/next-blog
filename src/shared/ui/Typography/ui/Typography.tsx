@@ -1,5 +1,6 @@
 import { classNames, Mods } from "@/shared/lib/classNames/classNames";
 import cls from "./Typography.module.scss";
+import { memo } from "react";
 
 export enum TypographyColor {
   PRIMARY = "primary",
@@ -26,7 +27,7 @@ interface TypographyProps {
   color?: TypographyColor;
 }
 
-export const Typography = (props: TypographyProps) => {
+export const Typography = memo((props: TypographyProps) => {
   const {
     className,
     text,
@@ -48,4 +49,6 @@ export const Typography = (props: TypographyProps) => {
       {text && <p className={cls.text}>{text}</p>}
     </div>
   );
-};
+});
+
+Typography.displayName = "Typography";

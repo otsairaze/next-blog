@@ -10,18 +10,24 @@ export enum ButtonSize {
   XL = "size_xlarge"
 }
 
+export enum ButtonVariant {
+  CLEAR = "clear"
+}
+
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
   size?: ButtonSize;
+  variant?: ButtonVariant;
   disabled?: boolean;
   children?: ReactNode;
 }
 
 export const Button = memo((props: ButtonProps) => {
-  const { className, size = ButtonSize.M, disabled, children, ...rest } = props;
+  const { className, size = ButtonSize.M, disabled, variant = ButtonVariant.CLEAR, children, ...rest } = props;
 
   const mods: Mods = {
     [cls[size]]: true,
+    [cls[variant]]: true,
     [cls.disabled]: disabled
   };
 

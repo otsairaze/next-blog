@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/nextjs-vite";
-import { TextAlign, TextColor, TextSize, Typography } from "./Typography";
+import { Typography, TypographyAlign, TypographyColor, TypographySize } from "./Typography";
 
 const meta: Meta<typeof Typography> = {
   title: "shared/Typography",
@@ -27,9 +27,9 @@ export const PrimaryText: Story = {
   args: {
     text: "Text",
     title: "Title",
-    align: TextAlign.LEFT,
-    size: TextSize.L,
-    color: TextColor.PRIMARY
+    align: TypographyAlign.LEFT,
+    size: TypographySize.L,
+    color: TypographyColor.PRIMARY
   }
 };
 
@@ -37,8 +37,8 @@ export const ErrorText: Story = {
   args: {
     text: "Error",
     title: "Something wrong",
-    align: TextAlign.LEFT,
-    size: TextSize.L,
-    color: TextColor.ERROR
+    align: TypographyAlign.LEFT,
+    size: TypographySize.L,
+    color: TypographyColor.ERROR
   }
 };

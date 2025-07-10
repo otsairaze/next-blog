@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./styles/global.scss";
+import { StoreProvider } from "./providers/StoreProvider";
+import { Container } from "@/shared/ui/Container/Container";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,9 +20,13 @@ const RootLayout = ({
   children: React.ReactNode;
 }>) => {
   return (
-    <html lang="en" className={inter.className}>
-      <body>{children}</body>
-    </html>
+    <Container>
+      <html lang="en" className={inter.className}>
+        <StoreProvider>
+          <body>{children}</body>
+        </StoreProvider>
+      </html>
+    </Container>
   );
 };
 
