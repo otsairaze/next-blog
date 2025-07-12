@@ -2,13 +2,14 @@ import cls from "./Article.module.scss";
 import { Article } from "../../model/types/article";
 import { Button, ButtonVariant } from "@/shared/ui/Button";
 import { truncateText } from "@/shared/utils/truncateText";
+import Link from "next/link";
 
 interface ArticleProps extends Article {
   className?: string;
 }
 
 export const ArticleBlock = (props: ArticleProps) => {
-  const { description, imageUrl, title } = props;
+  const { description, imageUrl, title, id } = props;
 
   const shortDescription = truncateText(description, 150);
 
@@ -20,7 +21,9 @@ export const ArticleBlock = (props: ArticleProps) => {
       </div>
       <div className={cls.descriptionBlock}>
         <h2 className={cls.description}>{shortDescription}</h2>
-        <Button variant={ButtonVariant.CLEAR}>Читать дальше</Button>
+        <Link href={`/article/${id}`}>
+          <Button variant={ButtonVariant.CLEAR}>Читать дальше</Button>
+        </Link>
       </div>
     </div>
   );

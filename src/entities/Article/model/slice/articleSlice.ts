@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 import { fetchArticles } from "../services/fetchArticles/fetchArticles";
-import { ArticleState } from "../types/articleDetailsSchema";
+import { ArticleState } from "../types/articleSchema";
 
 const initialState: ArticleState = {
   isLoading: false

@@ -1,7 +1,7 @@
 import { Article } from "./article";
 
-export interface ArticleDetailsState {
+export interface ArticleState {
   isLoading: boolean;
   error?: string;
-  data?: Article;
+  data?: Article[];
 }
